@@ -128,7 +128,8 @@ function AddEvents(formId) {
     });
 }
 //chnage to heroku
-const host = "http://localhost:8080"
+const host = "https://ades-2b03.herokuapp.com/"
+// const host = "http://localhost:8080"
 function searchCompany(form, formId) {
     var text = document.getElementById("validationError" + formId);
     var formElement = document.getElementById(formId);
