@@ -53,7 +53,7 @@
             var timestamp = timenow.toISOString().slice(0, 19)
             var jsonData = $.ajax({
                 //heroku
-                url: `https://ades-2b03.herokuapp.com/`,
+                url: `https://ades-2b03.herokuapp.com/company/arrival_rate?queue_id=${selectedoption}&from=${timestamp}%2B08:00&duration=3`,
                 // url: `http://localhost:8080/company/arrival_rate?queue_id=${selectedoption}&from=${timestamp}%2B08:00&duration=3`,
                 dataType: "json",
             }).done(function (jsonData) {
