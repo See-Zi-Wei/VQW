@@ -128,7 +128,7 @@ function AddEvents(formId) {
     });
 }
 //chnage to heroku
-const host = "https://ades-2b03.herokuapp.com"
+const host = "https://see-zi-wei-ades-ca1.herokuapp.com"
 // const host = "http://localhost:8080"
 function searchCompany(form, formId) {
     var text = document.getElementById("validationError" + formId);
@@ -136,10 +136,10 @@ function searchCompany(form, formId) {
     var loader = formElement.getElementsByClassName("loader" + formId)[0];
     var companyId = form.elements["inputCompanyId"].value;
     loader.style.visibility = 'visible';
+    console.log( `${host}/company/queue?company_id=${companyId}`)
     console.log('sending http request for formId ' + formId);
     jQuery.ajax({
         method: 'GET',
-
         url: `${host}/company/queue?company_id=${companyId}`
     }).done(function (data) {
         console.log("request successful sent");
